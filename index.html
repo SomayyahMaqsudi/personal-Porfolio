@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale-1.0">
+        <title>Personal Portfolio Website</title>
+        <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="header">
+        <div class="container">
+                <nav>
+                        <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#about">About</a></li>
+                                <li><a href="#services">Services</a></li>
+                                <li><a href="#contact">Contact</a></li>
+                        </ul>
+                </nav>
+                <div class="header-text">
+                        <p>Web Developer<span><br> AE Student</p>
+                        <h1>Hi, I'm <span> Somayyah Maqsudi</span><br>Your New Web Developer</h1>
+                        <!--<br> will seperate sentences into different lines-->
+                        <!--here we used <span> and went to css and changes the color of name-->
+                </div>
+        </div>
+</div>
+
+<!---------about------->
+
+<div id="about">
+        <div class="container">
+                <div class="row">
+                        <div class="about-col-1">
+                                <img src="images/user.jpg">
+                        </div>
+                        <div class="about-col-2"> 
+                                <h1 class="sub-title">About Me</h1>
+                                <p>type something here</p>
+                                <div class="tab-titles">
+                                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                                </div>
+                        </div>
+                       
+
+<div class="tab-contents active-tab" id="skills"> 
+        <ul>
+                <li><span>Skill-1</span><br>Something-1</li>
+                <li><span>Skill-2</span><br>Something-2</li>
+                <li><span>Skill-3</span><br>Something-3</li>
+        </ul>
+</div>
+<div class="tab-contents" id="experience">
+        <ul>
+                <li><span>Experience-1</span><br>Something-1</li>
+                <li><span>Experience-2</span><br>Something-2</li>
+                <li><span>Experience-3</span><br>Something-3</li>
+        </ul>
+</div>
+
+<div class="tab-contents" id="education">
+        <ul>
+                <li><span>August 2019-Summer 2021</span><br>Associate Degree From GSU. General Studies</li>
+                <li><span>August 2021-Present</span><br>Undergrad Student at GT. Aerospace Engineering</li>
+        </ul>
+</div>
+
+                </div>
+        </div>
+</div>
+<!-------------------services----------------->
+<div id="services">
+        <div class="container">
+                <h1 class="sub-title">My Services</h1>
+                <div class="services-list">
+                        <div>
+                                <h2>Web Design</h2>
+                                <p>add the description for the service here</p>
+                                <a href="#">learn more</a>
+                        </div>
+                        <div>
+                                <h2>UI/UX Design</h2>
+                                <p>add the description for the service here</p>
+                                <a href="#">learn more</a>
+                        </div>
+                        <div>
+                                <h2>App Design</h2>
+                                <p>add the description for the service here</p>
+                                <a href="#">learn more</a>
+                        </div>
+                </div>
+        </div>
+</div>
+
+        <footer id="contact">
+                <div class="contact-info">
+                        <ul>
+                                <li>phone</li>
+                                <li>email</li>
+
+                        </ul>
+
+                </div>
+
+</footer>
+
+<script>
+
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+
+                for(tablinks of tablinks){
+                        tablink.classList.remove("active-link");
+        }
+
+        for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+}
+</script>
+
+</body>
+</html>
