@@ -6,8 +6,8 @@
 }
 body{
     background-color: black;
-    text-align: left;
 }
+
 #header{
     width: 100%;
     height: 100vh;
@@ -15,6 +15,7 @@ body{
     background-size: cover;
     background-position: center;
 }
+
 .container{
     padding: 10px 10%;
 }
@@ -28,10 +29,9 @@ nav{
 
 
 nav ul li{
-    display: inline-block;  /*for about, contanct.., and my name is somayyah.... */
+    display: list-item;  /*for about, contanct.., and my name is somayyah.... */
     list-style: none;
-    margin: 10px 20px;
-
+    margin: 10px 10px;
 }
 
 nav ul li a{
@@ -42,24 +42,8 @@ nav ul li a{
 }
 
 
-nav ul li a::after{
-content: '';
-width: 100%;
-height: 3px;
-
-position: relative;
-left: 0;
-bottom: -6px;
-transform: 0.5s;
-}
-
-
-nav ul li a:hover::after{
-    width: 100%;
-    background-color: #ff004f;
-}
 .header-text{
-    margin-top: 20%; /*--these are for web debeloper, AE student--*/
+    margin-top: 40%; /*--these are for web debeloper, AE student--*/
     font-size: 30px;
 }
 
@@ -71,10 +55,12 @@ margin-top: 20px;
 .header-text h1 span{ /*--this is for Somayyah Maqsudi--*/
     color: #ff004f;
 }
-/*-----------about--------*/
+
+
+/*------------------------------------------------------about----------------------------------------*/
 
 #about{
-    color:white;
+    color: white;;
     padding: 80px 0px;
 }
 
@@ -86,83 +72,98 @@ margin-top: 20px;
 
 .about-col-1{
     flex-basis: 25%; /*how big or small the image is. the second image*/
+    margin: 40px 25px;
 }
 .about-col-1 img{ /*second image*/
     width: 100%;
     border-radius: 15px;
 }
 .about-col-2{
-    flex-basis: 60%;
+    flex-basis: 70%;
 }
 
 .sub-title{
     font-size: 60px;
-    font-weight: 600; /*about me and my services sizing*/
+    font-weight: 600; /*about me and my work sizing*/
     color: white;
 }
 
 .tab-titles{
     display: flex;
     margin:20px 0 40px; /*20 from top, 0 from left and right, 40 from bottom*/
-}
-
-
-.tab-links{
-    margin-right: 50px;
+    margin: 20px 0px 20px;
+    justify-content: space-between;
     font-size: 20px;
-    font-weight: 500;
-    cursor: pointer;
-    display: relative;
 }
-.tab-links::after{
-    content: '';
-    width: 0;
-    height: 3px;
-    background-color: #ff004f;
-    position: absolute;
-    left: 0;
-    bottom: -8px;
-    transition: 0.5s;
-}
-.tab-links.active-link::after{
-width: 50%;
+
+.tab-titles ul li{
+    display: list-item;
+    margin: 20px 20px;
 }
 
 .tab-contents ul li{
     list-style: none;
-    margin: 10px 0px;
+    margin: 20px 0px 20PX;
+    display: list-item;
+}
+
+.tab-contents p{
+    display: flex;
+    margin: 10px 20px;
+}
+
+.tab-contents li{
+    margin: 10px 20px;
 }
 
 .tab-contents ul li span{
     color: #e04c35;
-    font-size: 14px;
+    font-size: 30px;
 }
-.tab-contents{
-    display: none;
-}
-.tab-contents.active-tab{
-    display: block;
-}
+ 
+/*-------------------------------------------work----------------------------------------------------------*/
 
-
-/*-----services----*/
-#services{
+#work{
     padding: 30px 0; /*--30px from top and bottom and 0 from left and right---*/
+    background-color: black;
 }
-.services-list{
+
+.work-list{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 40px;
     margin-top: 50px; /*---space from top--*/
+    background-color:black;
+    color: white;   /*this is for font color*/ 
 }
-#contact{
-    background-color: white;
-    bottom: 0;
-    position: relative;
-    height: 10vh;
-    display: flex;
-    flex-direction: row;
-    
 
 
+.work-list div{
+    background-color: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+}
+
+.work-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.work-list div a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+/*------------------------------------ -Contact ------------------------------------------------------*/
+.info{
+    font-size: 20px;
+    color: white;
+    margin: 20px 20px;
+    display: contents;
 }
